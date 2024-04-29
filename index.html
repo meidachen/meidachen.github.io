@@ -201,7 +201,7 @@
         } else {
             try {
                 document.getElementById("spinner").style.display = "flex";
-                let pc_promise = fetch(pc_file).then(response => response.arrayBuffer()).then(data => new Uint8Array(data));
+                let pc_promise = fetch(pc_file).then(wihtProgress).then(response => response.arrayBuffer()).then(data => new Uint8Array(data));
                 var scene_promise = Promise.resolve(null);
                 if (scene_file) {
                     scene_promise = fetch(scene_file, {
